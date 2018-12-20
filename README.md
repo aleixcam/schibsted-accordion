@@ -1,1 +1,3 @@
-schibsted-accordion
+# Schibsted Accordion
+
+Easy to use accordion

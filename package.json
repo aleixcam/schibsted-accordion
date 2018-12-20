@@ -1,0 +1,33 @@
+{
+  "name": "simple-accordion",
+  "version": "0.0.1",
+  "description": "Easy to use accordion",
+  "author": "Aleix Caminal",
+  "license": "ISC",
+  "main": "build/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleixcam/schibsted-accordion.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aleixcam/schibsted-accordion/issues"
+  },
+  "homepage": "https://github.com/aleixcam/schibsted-accordion#readme",
+  "keywords": [
+    "schibsted",
+    "simple",
+    "accordion",
+    "suit",
+    "component"
+  ],
+  "scripts": {
+    "build": "babel src -d build",
+    "test": "nyc mocha"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0"
+  }
+}
