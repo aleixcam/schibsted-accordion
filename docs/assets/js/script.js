@@ -1,3 +1,1 @@
-const accordion = new Accordion('accordion', {
-    className: 'accordion-demo'
-})
+const accordion = new Accordion('accordion')
