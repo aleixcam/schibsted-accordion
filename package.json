@@ -4,7 +4,7 @@
   "description": "Easy to use accordion",
   "author": "Aleix Caminal",
   "license": "ISC",
-  "main": "build/index.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aleixcam/schibsted-accordion.git"
@@ -21,13 +21,18 @@
     "component"
   ],
   "scripts": {
-    "build": "babel src -d build",
+    "build": "npm run build:scripts && npm run build:styles",
+    "build:scripts": "babel src -d build",
+    "build:styles": "uglifycss src/css/*.css > build/css/accordion.min.css",
     "test": "nyc mocha"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-minify": "^0.5.0",
+    "babel-preset-minify": "^0.5.0",
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
-    "nyc": "^13.1.0"
+    "nyc": "^13.1.0",
+    "uglifycss": "0.0.29"
   }
 }
