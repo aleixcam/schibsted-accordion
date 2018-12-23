@@ -14,7 +14,7 @@ class Accordion {
         const headings = this._accordion.getElementsByTagName('dt')
         for (const heading of headings) {
             heading.className = this._headingClass
-            heading.addEventListener('click', this.toggle.bind(this))
+            heading.addEventListener('click', this._toggle.bind(this))
         }
 
         const bodies = this._accordion.getElementsByTagName('dd')
@@ -23,16 +23,18 @@ class Accordion {
         }
     }
 
+    _toggle(event) {
+        const body = event.target.nextElementSibling
+        body.classList.contains(this._openClass) ? this._close(body) : this._open(body)
+    }
+
     _open(body) {
+        const bodies = this._accordion.getElementsByTagName('dd')
+        for (const body of bodies) this._close(body)
         body.classList.add(this._openClass)
     }
 
     _close(body) {
         body.classList.remove(this._openClass)
-    }
-
-    toggle(event) {
-        const body = event.target.nextElementSibling
-        body.classList.contains(this._openClass) ? this._close(body) : this._open(body)
     }
 }

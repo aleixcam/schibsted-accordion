@@ -1,3 +1,36 @@
-
+.Accordion {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 2rem);
+  margin: 1rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+.Accordion-heading {
+  margin: -0.25rem 0;
+  padding: 0 1.5rem;
+  line-height: 3.5rem;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #2196f3;
+  color: #fff;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.Accordion-body {
+  flex: 0;
+  margin: 0;
+  padding: 0 1.5rem;
+  background-color: #fff;
+  overflow: hidden;
+  transition: flex 0.4s ease;
+}
+.Accordion-body.is-open {
+  flex: 1;
+  transition: flex 0.2s ease;
+}
 
 /*# sourceMappingURL=accordion.css.map */
