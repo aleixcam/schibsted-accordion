@@ -17,7 +17,6 @@
   color: #fff;
   border-radius: 0.25rem;
   overflow: hidden;
-  transition: all 0.2s ease;
   cursor: pointer;
 }
 .Accordion-body {
@@ -25,12 +24,11 @@
   margin: 0;
   padding: 0 1.5rem;
   background-color: #fff;
-  overflow: hidden;
   transition: flex 0.4s ease;
+  overflow: hidden;
 }
 .Accordion-body.is-open {
   flex: 1;
-  transition: flex 0.2s ease;
 }
 
 /*# sourceMappingURL=accordion.css.map */

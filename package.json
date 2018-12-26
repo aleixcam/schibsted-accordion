@@ -22,17 +22,15 @@
   ],
   "scripts": {
     "build": "npm run build:scripts && npm run build:styles",
-    "build:scripts": "babel src -d build",
-    "build:styles": "uglifycss src/css/*.css > build/css/accordion.min.css",
-    "test": "nyc mocha"
+    "build:scripts": "babel src -d build && mv build/js/accordion.js build/accordion.min.js && rm -rf build/js",
+    "build:styles": "uglifycss src/css/*.css > build/accordion.min.css",
+    "test": "jest"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-minify": "^0.5.0",
     "babel-preset-minify": "^0.5.0",
-    "chai": "^4.2.0",
-    "mocha": "^5.2.0",
-    "nyc": "^13.1.0",
+    "jest": "^23.6.0",
     "uglifycss": "0.0.29"
   }
 }
