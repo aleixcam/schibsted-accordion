@@ -1,8 +1,8 @@
 .Accordion {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 2rem);
-  margin: 1rem;
+  height: 100%;
+  margin: 0;
   border-radius: 0.25rem;
   overflow: hidden;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
