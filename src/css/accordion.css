@@ -27,6 +27,11 @@
   transition: flex 0.4s ease;
   overflow: hidden;
 }
+.Accordion-body * {
+  margin: 0;
+  padding-top: 1rem;
+  word-break: break-word;
+}
 .Accordion-body.is-open {
   flex: 1;
 }

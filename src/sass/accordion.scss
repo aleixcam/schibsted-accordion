@@ -31,6 +31,12 @@ $color-background: #fff;
         transition: flex .4s ease;
         overflow: hidden;
 
+        * {
+            margin: 0;
+            padding-top: 1rem;
+            word-break: break-word;
+        }
+
         &.is-open {
             flex: 1;
         }

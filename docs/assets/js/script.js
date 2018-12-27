@@ -1,3 +1,7 @@
 const accordion = new Accordion('accordion')
 
-const accordionAjax = new Accordion('accordion-ajax')
+Bolt.getDownloadLinks(links => {
+    const accordionAjax = new Accordion('accordion-ajax', {
+        data: links
+    })
+})

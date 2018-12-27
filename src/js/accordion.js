@@ -5,6 +5,7 @@ class Accordion {
         this._headingClass = `${this._accordionClass}-heading`
         this._bodyClass = `${this._accordionClass}-body`
         this._openClass = `is-open`
+        if (options.data) this._parseData(options.data)
         this._init()
     }
 
@@ -21,6 +22,23 @@ class Accordion {
         for (const body of bodies) {
             body.className = this._bodyClass
         }
+    }
+
+    _parseData(data) {
+        data.forEach(row => {
+            const accordionHeading = document.createElement('dt')
+            accordionHeading.innerText = row.heading
+            this._accordion.appendChild(accordionHeading)
+
+            const accordionBody = document.createElement('dd')
+            this._accordion.appendChild(accordionBody)
+
+            row.body.forEach(paragraph => {
+                const accordionBodyParagraph = document.createElement('p')
+                accordionBodyParagraph.innerText = paragraph
+                accordionBody.appendChild(accordionBodyParagraph)
+            })
+        })
     }
 
     _toggle(event) {
