@@ -22,7 +22,6 @@ class Bolt {
                 releases.forEach(release => {
                     const name = `Bolt-${release.name}-mac.zip`
                     const asset = release.assets.find(asset => asset.name === name)
-                    console.log(release);
                     links.push({
                         heading: `Bolt ${release.tag_name}`,
                         body: [
