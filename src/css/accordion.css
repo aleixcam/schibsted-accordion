@@ -28,6 +28,9 @@
   transition: flex 0.4s ease;
   overflow: auto;
 }
+.Accordion-body.is-open {
+  flex: 1;
+}
 .Accordion-body * {
   display: inline-block;
   margin: 0;
@@ -36,9 +39,6 @@
 }
 .Accordion-body * + * {
   padding-bottom: 1rem;
-}
-.Accordion-body.is-open {
-  flex: 1;
 }
 
 /*# sourceMappingURL=accordion.css.map */
