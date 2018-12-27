@@ -1,6 +1,8 @@
 class Accordion {
     constructor(id, options = {}) {
+        this._matchUrl = new RegExp(/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi)
         this._accordion = document.getElementById(id)
+        if (options.data) this._parseData(options.data)
         this._accordionClass = options.className || 'Accordion'
         this._headingClass = `${this._accordionClass}-heading`
         this._bodyClass = `${this._accordionClass}-body`
@@ -21,6 +23,25 @@ class Accordion {
         for (const body of bodies) {
             body.className = this._bodyClass
         }
+    }
+
+    _parseData(data) {
+        data.forEach(row => {
+            const accordionHeading = document.createElement('dt')
+            accordionHeading.innerText = row.heading
+            this._accordion.appendChild(accordionHeading)
+
+            const accordionBody = document.createElement('dd')
+            this._accordion.appendChild(accordionBody)
+
+            row.body.forEach(paragraph => {
+                const url = paragraph.match(this._matchUrl)
+                const accordionBodyParagraph = document.createElement(url ? 'a' : 'p')
+                if (url) accordionBodyParagraph.href = url
+                accordionBodyParagraph.innerText = paragraph
+                accordionBody.appendChild(accordionBodyParagraph)
+            })
+        })
     }
 
     _toggle(event) {
