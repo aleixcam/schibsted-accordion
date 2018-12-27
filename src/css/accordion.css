@@ -21,16 +21,21 @@
 }
 .Accordion-body {
   flex: 0;
+  height: 0;
   margin: 0;
   padding: 0 1.5rem;
   background-color: #fff;
   transition: flex 0.4s ease;
-  overflow: hidden;
+  overflow: auto;
 }
 .Accordion-body * {
+  display: inline-block;
   margin: 0;
-  padding-top: 1rem;
+  padding: 1rem 0 0;
   word-break: break-word;
+}
+.Accordion-body * + * {
+  padding-bottom: 1rem;
 }
 .Accordion-body.is-open {
   flex: 1;

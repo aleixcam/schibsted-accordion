@@ -19,13 +19,16 @@ class Bolt {
         return this.releases()
             .then(releases => {
                 const links = []
-                releases = releases.filter(release => !release.prerelease && !release.draft)
                 releases.forEach(release => {
                     const name = `Bolt-${release.name}-mac.zip`
                     const asset = release.assets.find(asset => asset.name === name)
+                    console.log(release);
                     links.push({
                         heading: `Bolt ${release.tag_name}`,
-                        body: [asset.browser_download_url]
+                        body: [
+                            asset.browser_download_url,
+                            release.body
+                        ]
                     })
                 })
 
