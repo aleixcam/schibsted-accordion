@@ -1,3 +1,50 @@
-body {
-    background-color: green;
+$color-primary: #2196f3;
+$color-background: #fff;
+
+.Accordion {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    border-radius: .25rem;
+    overflow: hidden;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+
+    &-heading {
+        margin: -.25rem 0;
+        padding: 0 1.5rem;
+        line-height: 3.5rem;
+        font-size: 20px;
+        font-weight: 600;
+        background-color: $color-primary;
+        color: #fff;
+        border-radius: .25rem;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    &-body {
+        flex: 0;
+        height: 0;
+        margin: 0;
+        padding: 0 1.5rem;
+        background-color: $color-background;
+        transition: flex .4s ease;
+        overflow: auto;
+
+        * {
+            display: inline-block;
+            margin: 0;
+            padding: 1rem 0 0;
+            word-break: break-word;
+
+            & + * {
+                padding-bottom: 1rem;
+            }
+        }
+
+        &.is-open {
+            flex: 1;
+        }
+    }
 }

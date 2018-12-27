@@ -1,1 +1,0 @@
-class Accordion{constructor(a,b){console.log(a),console.log(b)}}
