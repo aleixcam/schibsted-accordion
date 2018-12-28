@@ -9,10 +9,11 @@ https://aleixcam.github.io/schibsted-accordion/
 
 ## Usage
 
-Download the [js](https://raw.githubusercontent.com/aleixcam/schibsted-accordion/master/build/accordion.min.js) and [css](https://raw.githubusercontent.com/aleixcam/schibsted-accordion/master/build/accordion.min.css) files and include them in your html.
+Download the [js](https://raw.githubusercontent.com/aleixcam/schibsted-accordion/master/build/accordion.min.js) and, if you want the default styles, the [css](https://raw.githubusercontent.com/aleixcam/schibsted-accordion/master/build/accordion.min.css) files and include them in your html.
 
-```javascript
-const accordion = new Accordion('accordion')
+```html
+<script type="text/javascript" src="route/to/file/accordion.min.js"></script>
+<link rel="stylesheet" href="route/to/file/accordion.min.css">
 ```
 
 ## Syntax
