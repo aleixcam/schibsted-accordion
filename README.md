@@ -5,11 +5,11 @@ Easy to use accordion
 ## Live Demo
 
 One demo worths a thousand words:
-https://aleixcam.github.io/schibsted-accordion/
+https://aleixcam.github.io/simple-accordion/
 
 ## Usage
 
-Download the [js](https://raw.githubusercontent.com/aleixcam/schibsted-accordion/master/build/accordion.min.js) and, if you want the default styles, the [css](https://raw.githubusercontent.com/aleixcam/schibsted-accordion/master/build/accordion.min.css) files and include them in your html.
+Download the [js](https://raw.githubusercontent.com/aleixcam/simple-accordion/master/build/accordion.min.js) and, if you want the default styles, the [css](https://raw.githubusercontent.com/aleixcam/simple-accordion/master/build/accordion.min.css) files and include them in your html.
 
 ```html
 <script type="text/javascript" src="route/to/file/accordion.min.js"></script>
@@ -31,6 +31,23 @@ new Accordion(id[, options])
 
 ## Examples
 
+```html
+<dl id="accordion">
+    <dt>Section 1</dt>
+    <dd>
+        <p>Section 1 Content...</p>
+    </dd>
+    <dt>Section 2</dt>
+    <dd>
+        <p>Section 2 Content...</p>
+    </dd>
+    <dt>Section 3</dt>
+    <dd>
+        <p>Section 3 Content...</p>
+    </dd>
+</dl>
+```
+
 ```javascript
 const simpleAccordion = new Accordion('accordion')
 
@@ -42,38 +59,3 @@ const withData = new Accordion('accordion_ajax', {
     data: dataFromSomewhere
 })
 ```
-
-# Original Statement
-
-## Frontend Exercise
-
-With the next markup, you must create an accordion (JS / CSS) show only the contents of a section at a time.
-Sure to follow the [SUIT](https://suitcss.github.io/) convention when working with CSS.
-
-
-```html
-<dl>
-  <dt>Section 1</dt>
-  <dd>
-    <p>Section 1 Content...</p>
-  </dd>
-  <dt>Section 2</dt>
-  <dd>
-    <p>Section 2 Content...</p>
-  </dd>
-  <dt>Section 3</dt>
-  <dd>
-    <p>Section 3 Content...</p>
-  </dd>
-</dl>
-```
-
-### Conditions
-* Use Sass for generate CSS
-* Use ES6
-* Use only Vanilla JS, without any JS framework
-* Generate gh-page for publish
-
-
-### Bonus
-* Add new section with Ajax content
